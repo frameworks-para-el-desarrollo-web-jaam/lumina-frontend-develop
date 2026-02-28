@@ -1,11 +1,14 @@
-import Navbar from './components/sections/Navbar'
+import React from "react";
+import Hero from "./components/sections/Hero";
+import Navbar from "./components/sections/Navbar";
 
-const App = () => {
- return (
- <div className='overflow-x-hidden'>
- <Navbar />
- </div>
- )
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
 
-export default App
+export default App;

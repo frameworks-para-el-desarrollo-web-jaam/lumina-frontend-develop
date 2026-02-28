@@ -1,40 +1,37 @@
-import React from 'react'
-import { navbarLinks } from '../../data/data.js';
-import { CiSearch } from "react-icons/ci";
-import { MdMenu } from "react-icons/md";
-import { PiShoppingCartLight } from "react-icons/pi";
+import React from "react";
 
-const Navbar = ()=> {
-    return (
-        <>
-            <nav>
-                {/* secciones */}
-                <div className='container flex justify-between font-bolditems-center py-8'>
-                    {
-                        <div className='text-2xl flex items-center gap-2 uppercase'>
-                        <p>LUMINA</p>
-                        <p className='text-secondary'>By Fernanda</p>
-                        </div>     
-                    }
-                    {
-                        <div className="hidden md:block">
-                            <ul className="flex items-center gap-7 text-gray-600">
-                                {navbarLinks.map((item) => (
-                                <li key={item.id}>
-                                    <a href={item.url} className="inline-block py-1 px-3 hover:text-primary">
-                                    {item.title}
-                                    </a>
-                                </li>
-                            ))}
-                            </ul>
-                        </div>
+const Navbar = () => {
+  return (
+    <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        {/* Logo */}
+        <h1 className="text-2xl font-semibold tracking-wide text-gray-800">
+          Lumina
+        </h1>
 
-                    }
-                </div>
-            </nav>
-        </>
-    )
-}
+        {/* Menu */}
+        <nav className="hidden md:flex gap-10 text-gray-700 font-medium">
+          <button className="hover:text-green-600 transition">
+            Tienda
+          </button>
 
-export default Navbar
+          <button className="hover:text-green-600 transition">
+            Acerca de
+          </button>
 
+          <button className="hover:text-green-600 transition">
+            Contacto
+          </button>
+
+          <button className="hover:text-green-600 transition">
+            🛒
+          </button>
+        </nav>
+
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
